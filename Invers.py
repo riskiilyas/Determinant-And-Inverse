@@ -71,9 +71,11 @@ def inverse(matrix):
         # Row to Add to the Inverse Matrix
         InverseMatrixRow = []
         for j in range(0, len(modifiedMatrix)):
-
+            inversedElement = modifiedMatrix[j][i] / determinant
             # Position the element with Transpose Rule & Also divide by determinant to get the Inverse
-            InverseMatrixRow.append(modifiedMatrix[j][i] / determinant)
+            InverseMatrixRow.append(
+                str(int(inversedElement)) if inversedElement == int(inversedElement)
+                else str(modifiedMatrix[j][i]) + '/' + str(determinant))
 
         # Add the InverseMatrixRow to the InverseMatrix
         inverseMatrix.append(InverseMatrixRow)
