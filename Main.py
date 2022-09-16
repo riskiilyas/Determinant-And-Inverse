@@ -8,15 +8,13 @@ matrix = []
 
 for i in range(0, size):
     row = []
+    rowInput = input('Row ' + str(i+1) + ' (Separate with \' \') : ').split(' ')
     for j in range(0, size):
-        row.append(int(input('(' + str(i) + ', ' + str(j) + ') ')))
+        row.append(int(rowInput[j]))
 
     matrix.append(row)
 
 print('Determinant : ' + str(Determinant.determinant(matrix)))
-print('Matrix : ')
-for row in matrix:
-    print(row)
 print('Inverse : ')
 
 inverse = Invers.inverse(matrix)
