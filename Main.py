@@ -6,9 +6,10 @@ import Invers
 size = int(input('How much is the size (size > 0)? '))
 matrix = []
 
+print('Input the Row Separate with Space (\' \')')
 for i in range(0, size):
     row = []
-    rowInput = input('Row ' + str(i+1) + ' (Separate with \' \') : ').split(' ')
+    rowInput = input('Row ' + str(i+1) + ' : ').split(' ')
     for j in range(0, size):
         row.append(int(rowInput[j]))
 
